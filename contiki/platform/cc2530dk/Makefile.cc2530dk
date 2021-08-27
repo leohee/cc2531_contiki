@@ -27,7 +27,7 @@ FORCE:
 
 # .sensinode target so we can behave similar to other targets
 %.$(TARGET): %.hex FORCE
-	cp $< $(<:.hex=.$(TARGET))
+#	cp $< $(<:.hex=.$(TARGET))
 	@echo "\nReport"
 	@echo "==============="
 	@echo 'Code footprint:'

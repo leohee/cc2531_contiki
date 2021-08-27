@@ -25,4 +25,4 @@ obj_*
 *.cdb
 *.omf
 *.flags
-
+contiki-*.lib
