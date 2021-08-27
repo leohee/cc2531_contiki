@@ -1,6 +1,12 @@
 DEFINES += PROJECT_CONF_H=\"project-conf.h\"
+
 CONTIKI_PROJECT = radio_bridge
-PROJECT_SOURCEFILES += serial_protocol.c commands.c serialization.c radio_bridge_rdc.c
+
+BRIDGE_SOURCES_DIR = ./radiobridge
+BRIDGE_SOURCES_FILES = $(notdir $(shell find $(BRIDGE_SOURCES_DIR) -name '*.c'))
+
+PROJECTDIRS += $(BRIDGE_SOURCES_DIR)
+PROJECT_SOURCEFILES += $(BRIDGE_SOURCES_FILES)
 
 TARGET = cc2530dk
 

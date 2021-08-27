@@ -1,5 +1,21 @@
 CONTIKI_PROJECT = hello-world blink-hello timer-test sensors-demo
 
+HELLO_RESOURCES_DIR = ./helloworld
+HELLO_RESOURCES_FILES = $(notdir $(shell find $(HELLO_RESOURCES_DIR) -name '*.c'))
+
+BLINK_RESOURCES_DIR = ./blinkhello
+BLINK_RESOURCES_FILES = $(notdir $(shell find $(BLINK_RESOURCES_DIR) -name '*.c'))
+
+TIMER_RESOURCES_DIR = ./timertest
+TIMER_RESOURCES_FILES = $(notdir $(shell find $(TIMER_RESOURCES_DIR) -name '*.c'))
+
+SENSORS_RESOURCES_DIR = ./sensorsdemo
+SENSORS_RESOURCES_FILES = $(notdir $(shell find $(SENSORS_RESOURCES_DIR) -name '*.c'))
+
+
+PROJECTDIRS += $(HELLO_RESOURCES_DIR) $(BLINK_RESOURCES_DIR) $(TIMER_RESOURCES_DIR) $(SENSORS_RESOURCES_DIR)
+PROJECT_SOURCEFILES += $(HELLO_RESOURCES_FILES) $(BLINK_RESOURCES_FILES) $(TIMER_RESOURCES_FILES) $(SENSORS_RESOURCES_FILES)
+
 all: $(CONTIKI_PROJECT) 
 
 CONTIKI = ../../contiki
