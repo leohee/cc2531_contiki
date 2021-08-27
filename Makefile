@@ -58,5 +58,5 @@ IPV6_clean :
 
 clean : Hello_clean Bridge_clean Router_clean USB_DEMO_clean IPV6_clean
 
-.PYONY: all Hello Hello_clean Bridge Bridge_clean Router Router_clean USB_DEMO USB_DEMO_clean IPV6 IPV6_clean
+.PHONY: all Hello Hello_clean Bridge Bridge_clean Router Router_clean USB_DEMO USB_DEMO_clean IPV6 IPV6_clean
 
