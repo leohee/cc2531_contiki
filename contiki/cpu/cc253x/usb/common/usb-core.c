@@ -182,8 +182,7 @@ get_string_descriptor()
   const struct usb_st_string_descriptor *descriptor;
 
   descriptor = (struct usb_st_string_descriptor *)
-    usb_class_get_string_descriptor(usb_setup_buffer.wIndex,
-                                    LOW_BYTE(usb_setup_buffer.wValue));
+    usb_class_get_string_descriptor(LOW_BYTE(usb_setup_buffer.wValue));
   if(!descriptor) {
     usb_error_stall();
     return;

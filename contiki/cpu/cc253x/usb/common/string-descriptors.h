@@ -17,4 +17,4 @@ struct usb_st_string_languages {
 
 extern const struct usb_st_string_languages *const string_languages;
 
-const uint8_t *usb_class_get_string_descriptor(uint16_t lang, uint8_t index);
+const uint8_t *usb_class_get_string_descriptor(uint8_t index);

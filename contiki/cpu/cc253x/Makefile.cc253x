@@ -18,8 +18,8 @@ CFLAGS  += --model-$(MEMORY_MODEL) --stack-auto --std-c99
 CFLAGS  +=  -DCC2530_LAST_FLASH_BANK=$(HIGH_FLASH_BANK)
 CFLAGS  += --fomit-frame-pointer
 
-### Disable warning 110 (EVELYN the modified dog) and 126 (unreachable code)
-CFLAGS += --disable-warning 110 --disable-warning 126
+### Disable warning 110 (EVELYN the modified dog) and 126 (unreachable code) and 85 (unreferenced function argument)
+CFLAGS += --disable-warning 110 --disable-warning 126 --disable-warning 85
 
 LDFLAGS += --model-$(MEMORY_MODEL) --stack-auto --out-fmt-ihx
 LDFLAGS += --xram-loc 0x0000 --xram-size 0x1F00

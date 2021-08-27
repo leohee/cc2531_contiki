@@ -110,7 +110,7 @@ static uint8_t buffered_data = 0;
 static int (* input_handler)(unsigned char c);
 /*---------------------------------------------------------------------------*/
 uint8_t *
-usb_class_get_string_descriptor(uint16_t lang, uint8_t string)
+usb_class_get_string_descriptor(uint8_t string)
 {
   switch (string) {
   case 0:
